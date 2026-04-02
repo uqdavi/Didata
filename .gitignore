@@ -1,0 +1,67 @@
+# ========== Compilação e Build ==========
+out/
+build/
+dist/
+*.class
+*.jar
+*.exe
+*.dll
+*.so
+
+# Ignorar a pasta src para manter o código privado
+src/
+
+# ========== IDE e Editor ==========
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+*.swp
+*.swo
+*~
+.DS_Store
+.project
+.classpath
+.settings/
+.metadata/
+
+# ========== Inno Setup ==========
+didata-installer/Output/
+didata-installer/jre/
+*.tmp
+SetupLog.txt
+
+# ========== Runtime e Logs ==========
+*.log
+*.pid
+*.seed
+
+# ========== Arquivos de teste ==========
+*.dd
+!meta.dd
+test_output/
+temp/
+
+# ========== Sistema operacional ==========
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ========== Node/npm (se aplicável) ==========
+node_modules/
+npm-debug.log
+yarn.lock
+package-lock.json
+
+# ========== Python (se aplicável) ==========
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv
+
+# ========== Arquivos sensíveis ==========
+secrets.properties
+.env
+.env.local
