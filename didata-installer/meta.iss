@@ -25,7 +25,7 @@ DisableProgramGroupPage=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only).
 ;PrivilegesRequired=lowest
 OutputBaseFilename=Didata Setup
-SetupIconFile=C:\Users\Administrator\Pictures\didata-favicon-256.ico
+SetupIconFile=C:\Users\Administrator\Pictures\didata.ico
 SolidCompression=yes
 WizardStyle=modern dark
 

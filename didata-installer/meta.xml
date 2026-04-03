@@ -3,7 +3,7 @@
   <dontWrapJar>false</dontWrapJar>
   <headerType>console</headerType>
   <jar>C:\Users\Administrator\Desktop\didata\didata-installer\didata.jar</jar>
-  <outfile>C:\Users\Administrator\Desktop\didata\didata-installer\didata.exe</outfile>
+  <outfile>C:\Users\Administrator\Desktop\didata\didata-installer\testandcode.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
@@ -13,7 +13,7 @@
   <stayAlive>false</stayAlive>
   <restartOnCrash>false</restartOnCrash>
   <manifest></manifest>
-  <icon>C:\Users\Administrator\Pictures\didata-favicon-256.ico</icon>
+  <icon>C:\Users\Administrator\Pictures\icon_perfeito.ico</icon>
   <jre>
     <path>jre</path>
     <requiresJdk>false</requiresJdk>
