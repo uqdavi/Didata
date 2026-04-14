@@ -3,7 +3,7 @@
 ; Non-commercial use only
 
 #define MyAppName "Didata"
-#define MyAppVersion "1.0.0"
+#define MyAppVersion "2.1.0"
 #define MyAppPublisher "Davi Silva"
 #define MyAppExeName "didata.bat"
 #define MyAppAssocName MyAppName + " File"

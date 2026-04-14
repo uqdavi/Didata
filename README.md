@@ -2,7 +2,7 @@
 
 **Didata** é um projeto pessoal: uma **linguagem de programação de domínio específico (DSL)** feita para ser **didática e fácil para iniciantes brasileiros** na programação.
 
-> **Versão atual:** 2.0.0  
+> **Versão atual:** 2.1.0  
 > **Arquivos:** `.dd`  
 > **Plataforma:** Windows (com JRE embutida)
 
@@ -127,30 +127,6 @@ escreva <- x + y
 
 ---
 
-#### `escreva_var` / `imprimir`
-
-Exibe o valor armazenado em uma variável. Para variáveis do tipo booleano, exibe `verdadeiro` ou `falso`.
-
-> `imprimir` é um alias de `escreva_var` — ambos fazem a mesma coisa.
-
-**Sintaxe:**
-```didata
-escreva_var nome_variavel
-imprimir nome_variavel
-```
-
-**Exemplos:**
-
-```didata
-idade  <- 25
-ativo  <- verdadeiro
-
-escreva_var idade    // exibe: 25
-imprimir ativo       // exibe: verdadeiro
-```
-
----
-
 ### Entrada (Input)
 
 #### `leia` / `ler`
@@ -254,7 +230,7 @@ fim
 
 **Tipos suportados na comparação:** números, texto, booleanos e caracteres.
 
-**Exemplo com `senao`:**
+**Exemplo simples:**
 
 ```didata
 idade <- 18
@@ -278,6 +254,58 @@ fim
 
 ---
 
+#### `senao se` — Condições encadeadas
+
+Use `senao se` para verificar múltiplas condições em sequência, sem precisar aninhar vários `se`. Um único `fim` fecha toda a cadeia.
+
+**Sintaxe:**
+
+```didata
+se variavel operador valor entao
+    // primeiro bloco
+senao se variavel operador valor entao
+    // segundo bloco
+senao se variavel operador valor entao
+    // terceiro bloco (pode ter quantos precisar)
+senao
+    // bloco final, caso nenhuma condição seja verdadeira (opcional)
+fim
+```
+
+**Exemplo — classificação de nota:**
+
+```didata
+nota <- 7
+
+se nota >= 9 entao
+    escreva <- "Ótimo"
+senao se nota >= 7 entao
+    escreva <- "Bom"
+senao se nota >= 6 entao
+    escreva <- "Aprovado"
+senao
+    escreva <- "Reprovado"
+fim
+```
+
+**Exemplo — sem bloco `senao` final:**
+
+```didata
+mes <- 3
+
+se mes == 1 entao
+    escreva <- "Janeiro"
+senao se mes == 2 entao
+    escreva <- "Fevereiro"
+senao se mes == 3 entao
+    escreva <- "Março"
+fim
+```
+
+> **Regra:** apenas o primeiro bloco cuja condição for verdadeira é executado. Os demais são ignorados.
+
+---
+
 ## Exemplo Completo
 
 ```didata
@@ -295,20 +323,22 @@ dobro <- idade * 2
 // Saída no terminal
 escreva <- "Olá, "
 escreva <- nome
-escreva_var idade
-imprimir ativo
+escreva <- idade
+escreva(ativo)
 escreva <- dobro
 
-// Estrutura condicional
+// Estrutura condicional com senao se
 se idade >= 18 entao
     escreva <- "Maior de idade"
+senao se idade >= 16 entao
+    escreva <- "Quase lá"
 senao
     escreva <- "Menor de idade"
 fim
 
 // Leitura de entrada do usuário
 escreva <- "Digite seu nome:"
-leia resposta
+leia <- resposta
 escreva <- resposta
 ```
 
@@ -332,4 +362,4 @@ Os seguintes recursos **ainda não estão disponíveis** nesta versão:
 
 Este é um projeto **educacional e experimental**, voltado para aprendizado e prática. O objetivo principal é criar uma **experiência simples e didática** para quem está começando a programar.
 
-Feito por **Davi Silva** — Versão 2.0.0
+Feito por **Davi Silva** — Versão 2.1.0
